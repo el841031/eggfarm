@@ -1,0 +1,332 @@
+// banner
+.banner {
+  width: 100%;
+  height: 500px;
+  cursor: grab;
+}
+
+// swiper 套件修改樣式
+.swiper-pagination-bullet {
+  background-color: rgb(100, 100, 100) !important;
+}
+.swiper-pagination-bullet-active {
+  background-color: $primary !important;
+}
+
+// 產品包裝文案
+.products {
+  @include fullCenter;
+
+  .products-text h4{   
+    @include font($primary, 500, $fontSize-h4);
+    padding: 40px 0px;
+    line-height: 2;
+    letter-spacing: 8.5px;
+    position: relative;
+    
+    &::before {
+      content: '';
+      @include img-png(foot, no-repeat);
+      width: 43px;
+      height: 37px;
+      display: inline-block;
+      transform: rotate(350deg) rotateY(180deg);
+      position: absolute;
+      left: 495px;
+      bottom: 65px;
+    }
+    &::after {
+      content: '';
+      @include img-png(foot, no-repeat);
+      width: 43px;
+      height: 37px;
+      display: inline-block;
+      transform: rotate(35deg);
+      position: absolute;
+      right: 495px;
+      bottom: 65px;
+    }
+  }
+}
+
+// 雞蛋商店總覽
+.egg-shop {
+  background-color: $bg-primary;
+
+  h3 {
+    @include font($primary, 700, $fontSize-h3);
+    padding: 90px 0px 0px 0px;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 12.5px; 
+    
+    &::after {
+      content: '';
+      position: absolute;
+      width: 260px;
+      height: 2px;
+      background-color: $primary;
+      display: inline-block;
+      bottom: -20px;
+      left: -20px;
+    }
+  }
+  ul.egg-list {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    // border: 1px solid darkcyan;
+    justify-content: center;
+    margin: 70px auto 0px;
+    
+    li {
+      position: relative;
+      transition: all 0.3s;
+
+      &:hover {
+        opacity: 0.6;
+      }
+      a img {
+        border-radius: 100%;
+      } 
+    }
+    li.egg-items2 {
+      margin: 0 60px 90px 30px;    
+    }
+    li.egg-items3 {
+      margin: 0 20px 120px;
+
+      .price > .price-text {
+        margin-right: 115px;
+      }
+    }
+  }
+}
+
+// 雞蛋價錢
+.price {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  bottom: -23px;
+  left: 15px;
+
+  .price-text {
+    text-align: start;
+    margin-right: 116px;
+
+    h5 {
+      @include font($primary, 700, $fontSize-h5);
+      margin-bottom: 10px;
+    }
+    p {
+      @include font($secondary, 500, 14px);
+      
+    }
+  }
+  .big {
+    p {
+      @include font($secondary, 500, 12px);
+      margin-top: 5px;
+      padding-left: 8px;
+    }
+  }
+}
+
+// 簡介
+.about {
+  @include fullCenter;
+  position: relative;
+  height: 1000px;
+
+  .aboutBg {
+    @include img-jpg(aboutBg, no-repeat);
+    background-size: cover;
+    background-position: bottom;
+    width: 100%;
+    height: 1000px;
+    position: absolute;
+    z-index: -1;
+  }
+  h2 {
+    @include font($primary, 700, $fontSize-h2);
+    letter-spacing: 8px; 
+    padding: 120px 0px 40px 0px;
+  }
+  p {
+    @include font($secondary, 500, 15px);
+    line-height: 1.6;
+
+    &.about-text1 {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+// Lightbox 2 套件
+// 叉叉按鈕改成右上角
+.lb-data .lb-close {
+  position: absolute;
+  top: -40px;
+  right: 160px;
+}
+
+// 頁碼置中
+.lb-data .lb-number {
+  text-align: center;
+  margin-top: 10px;
+}
+.lb-data .lb-details {
+  width: 100% !important;
+}
+
+// 簡介-按鈕
+ul.aboutBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 70px;
+
+  li {
+    margin: 0px 20px;
+
+    a {
+      @include font($primary, 700, 15px);
+      @include button($primary, 50px, 12px 28px 12px 30px, rgba(255, 255, 255, 0.582));
+
+      &:hover {
+        opacity: 0.6;
+      }
+      &::before {
+        content: '';
+        @include img-png(arrow-dot, no-repeat);
+        width: 8px;
+        height: 12px;
+        display: inline-block;
+        margin-right: 12px;
+      }
+    }
+  }
+}
+
+// 聯絡我們
+.contact {
+  @include fullCenter;
+  position: relative;
+  height: 810px;
+
+  .contact-bg {
+    background-color: $bg-primary;
+    width: 100%;
+    height: 810px;
+    position: absolute;
+    bottom: 0;
+    z-index: -1;
+  }
+  h3{
+    @include font($primary, 700, $fontSize-h3);
+    padding: 90px 0px 30px;
+    position: relative;
+    display: inline-block;
+    letter-spacing: 12.5px;
+  }
+  p {
+    @include font($secondary, 500, 15px);
+    letter-spacing: 2px;
+    margin-bottom: 40px;
+  }
+}
+
+.contact-card {
+  width: 800px;
+  background-color: rgba(255, 255, 255, 0.644);
+  border: 2px solid rgba(206, 206, 206, 0.726);
+  margin: 0 auto;
+  border-radius: 10px;
+  display: flex;
+  box-shadow: 0 10px 12px #e0decdc0;
+  // justify-content: space-around;
+
+  .swiper {
+    width: 465px;
+    height: auto;
+    cursor: grab;
+    border-radius: 8px;
+  }
+}
+
+.form {
+  margin: 40px 50px 42px 50px;
+  text-align: start;
+
+  .item_block {
+    
+    label {
+      @include font($primary, 500, 14px);
+    }
+    input {
+      margin: 8px 0px 18px 0px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1.5px solid rgba(150, 150, 150, 0.726);
+      padding: 6px;
+      // background-color: #F9F8EE;
+
+      &:focus-visible {
+        background-color: $bg-primary;
+        outline: none; // 消除預設點擊邊框線
+        border: 2px solid rgba(138, 138, 138, 0.726);
+      }
+      &::placeholder {
+        letter-spacing: 0.6px;
+        color: rgb(182, 182, 182);
+      }
+    }
+    textarea {
+      margin: 8px 0px 18px 0px;
+      width: 250px;
+      border-radius: 5px;
+      border: 1.5px solid rgba(150, 150, 150, 0.726);
+      padding: 5px;
+      resize: none;
+
+      &:focus-visible {
+        background-color: $bg-primary;
+        outline: none; // 消除預設點擊邊框線
+        border: 2px solid rgba(138, 138, 138, 0.726);
+      }
+      &::placeholder {
+        letter-spacing: 0.6px;
+        color: rgb(182, 182, 182);
+      }
+    }
+  }
+  .submit-btn {
+    background-color: $primary;
+    color: white;
+    border: 1px solid $primary;
+    border-radius: 5px;
+    padding: 10px 98px;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+
+
+// top按鈕
+.top {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  transition: all 0.3s;
+  cursor: pointer;
+  // z-index: 1;
+
+  &:hover {
+    opacity: 0.6;
+  }
+}

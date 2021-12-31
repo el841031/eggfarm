@@ -1,0 +1,109 @@
+.header {
+  @include fullCenter;
+}
+
+
+// logo區塊
+h1.logo {
+  // border: 1px solid red;
+  display: inline-block;
+  margin: 30px 0;
+  transition: all 0.3s;
+  
+  &:hover {
+    opacity: 0.6;
+  }
+  a {
+    // border: 1px solid paleturquoise;
+    display: inline-block;
+
+    img.logo-img {
+      width: 300px;
+    }
+  }
+}
+
+
+// 下拉式選單
+ul.nav {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+  // border: 1px solid olivedrab;
+
+  li.nav-item {
+    position: relative;
+    // border: 1px solid olivedrab;
+
+    a.nav-item-a {
+      padding: 10px 30px;
+      transition: all 0.3s;
+      position: relative;
+      @include font($tertiary, 700, 15px);
+  
+      &:hover {
+        color: $primary;
+      }
+      &::after {
+        content: "";
+        width: 13px;
+        height: 1px;
+        background-color: #CCCCCC;
+        position: absolute;
+        right: -5px;
+        top: 50%;
+      }
+    }
+  }
+}
+
+li.nav-item:last-child > a::after {
+  display: none;
+}
+
+// 下拉式選單(展開)
+ul.item-open {
+  display: none;
+  // margin-top: 20px;
+  border: 1px solid $primary;
+  border-radius: 7px;
+  background-color: rgba(255, 255, 255, 0.7);
+  position: absolute;
+  z-index: 2;
+  top: 30px;
+  left: calc((100% - 112px)/2);
+
+  li {
+    &:first-child > a {
+      @include img-svg(dashed, repeat-x);
+      background-size: 4px 1px;
+      background-position: bottom left;
+    }
+
+    a {
+      display: inline-block;
+      padding: 15px 15px 15px 30px;
+      position: relative;
+      transition: all 0.3s;
+      // border: 1px solid pink;
+      @include font($primary, 700, 14px);
+      
+      &:hover {
+        opacity: 0.5;
+      }
+      &::before {
+        content: "";
+        @include img-svg(arrow, no-repeat);
+        width: 5px;
+        height: 8px;
+        position: absolute;
+        left: 11px;
+        top: 18px;
+      }
+    }
+  }
+}
+
+ul.nav li.nav-item > a.nav-item-a.active {
+  color: $primary;
+}

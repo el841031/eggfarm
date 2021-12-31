@@ -1,0 +1,16 @@
+// 字型
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap');
+
+// base
+@import './base/reset';
+@import './base/variables';
+
+// mixins
+@import './mixins/mixins';
+
+// layout
+@import './layout/header';
+@import './layout/footer';
+
+// pages
+@import './pages/index';
