@@ -75,7 +75,7 @@ $(document).ready(function () {
 		'resizeDuration': 600, // 放大的速度
     'wrapAround': true,
     'disableScrolling': true,
-    // 'alwaysShowNavOnTouchDevices': true,
+    'alwaysShowNavOnTouchDevices': true,
   })
 
 

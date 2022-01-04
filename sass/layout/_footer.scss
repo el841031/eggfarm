@@ -12,6 +12,9 @@
     margin: 50px 35px;
     text-align: center;
   }
+  @include iPad{
+    margin: 50px 60px;
+  }
 
   a > img {
     width: 260px;
@@ -22,10 +25,18 @@
       width: 200px;
     }
 
+    @include iPad{
+      width: 220px;
+    }
+    @include laptop{
+      width: 180px;
+    }
+
     &:hover {
       opacity: 0.6;
     }
   }
+
   p.address {
     @include font($tertiary, 500, 15px);
     margin-bottom: 5px;
@@ -44,7 +55,7 @@
       margin-right: 0px;
       margin-bottom: 10px;
     }
-  }
+  } 
   p.text {
     @include font($tertiary, 500, 14px);
     margin-top: 30px;
@@ -53,7 +64,6 @@
       font-size: 14.5px;
       margin-top: 20px;
     }
-
     a {
       @include font($tertiary, 500, 14px);
       text-decoration: underline 2px;
@@ -72,5 +82,13 @@
 
   @include mobile{
     display: none;
+  }
+  @include iPad{
+    margin-right: 12px;
+    width: 180px;
+  }
+  @include laptop{
+    margin-right: 12px;
+    width: 180px;
   }
 }
