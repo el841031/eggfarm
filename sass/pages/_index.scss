@@ -23,6 +23,10 @@
     line-height: 2;
     letter-spacing: 8.5px;
     position: relative;
+
+    @include mobile{
+      font-size: 16px;
+    }
     
     &::before {
       content: '';
@@ -34,6 +38,14 @@
       position: absolute;
       left: 495px;
       bottom: 65px;
+
+      @include mobile {
+        display: none;
+        // left: 321px;
+        // bottom: 52px;
+        // width: 38px;
+        // background-size: contain;
+      }
     }
     &::after {
       content: '';
@@ -45,6 +57,14 @@
       position: absolute;
       right: 495px;
       bottom: 65px;
+
+      @include mobile{
+        display: none;
+        // right: 325px;
+        // bottom: 52px;
+        // width: 38px;
+        // background-size: contain;
+      }
     }
   }
 }
@@ -52,6 +72,9 @@
 // 雞蛋商店總覽
 .egg-shop {
   background-color: $bg-primary;
+  @include mobile {
+    padding-bottom: 35px;
+  }
 
   h3 {
     @include font($primary, 700, $fontSize-h3);
@@ -59,6 +82,11 @@
     position: relative;
     display: inline-block;
     letter-spacing: 12.5px; 
+
+    @include mobile{
+      font-size: 20px;
+      padding-top: 60px;
+    }
     
     &::after {
       content: '';
@@ -69,6 +97,10 @@
       display: inline-block;
       bottom: -20px;
       left: -20px;
+
+      @include mobile{
+        width: 218px;
+      }
     }
   }
   ul.egg-list {
@@ -91,10 +123,18 @@
       } 
     }
     li.egg-items2 {
-      margin: 0 60px 90px 30px;    
+      margin: 0 60px 90px 30px;
+      
+      @include mobile {
+        margin: 0px 0px 80px;
+      }
     }
     li.egg-items3 {
       margin: 0 20px 120px;
+
+      @include mobile {
+        margin: 0px 0px 80px;
+      }
 
       .price > .price-text {
         margin-right: 115px;
@@ -114,6 +154,10 @@
   .price-text {
     text-align: start;
     margin-right: 116px;
+
+    @include mobile {
+      margin-bottom: -9px;
+    }
 
     h5 {
       @include font($primary, 700, $fontSize-h5);
@@ -152,32 +196,28 @@
     @include font($primary, 700, $fontSize-h2);
     letter-spacing: 8px; 
     padding: 120px 0px 40px 0px;
+
+    @include mobile{
+      padding-right: 35px;
+      padding-left: 35px;
+      font-size: 19px;
+      padding-top: 80px;
+    }
   }
   p {
     @include font($secondary, 500, 15px);
     line-height: 1.6;
 
+    @include mobile{
+      padding-right: 35px;
+      padding-left: 35px;
+      font-size: 12.5px;
+    }
+
     &.about-text1 {
       margin-bottom: 20px;
     }
   }
-}
-
-// Lightbox 2 套件
-// 叉叉按鈕改成右上角
-.lb-data .lb-close {
-  position: absolute;
-  top: -40px;
-  right: 160px;
-}
-
-// 頁碼置中
-.lb-data .lb-number {
-  text-align: center;
-  margin-top: 10px;
-}
-.lb-data .lb-details {
-  width: 100% !important;
 }
 
 // 簡介-按鈕
@@ -186,8 +226,18 @@ ul.aboutBtn {
   justify-content: center;
   margin-top: 70px;
 
+  @include mobile{
+    padding-right: 35px;
+    padding-left: 35px;
+    flex-direction: column;
+    margin-top: 15px
+  }
+
   li {
     margin: 0px 20px;
+    @include mobile{
+      margin-top: 60px;
+    }
 
     a {
       @include font($primary, 700, 15px);
@@ -207,6 +257,23 @@ ul.aboutBtn {
     }
   }
 }
+// Lightbox 2 套件
+// 叉叉按鈕改成右上角
+.lb-data .lb-close {
+  position: absolute;
+  top: -40px;
+  right: 160px;
+}
+
+// 頁碼置中
+.lb-data .lb-number {
+  text-align: center;
+  margin-top: 10px;
+}
+.lb-data .lb-details {
+  width: 100% !important;
+}
+
 
 // 聯絡我們
 .contact {
@@ -214,13 +281,18 @@ ul.aboutBtn {
   position: relative;
   height: 810px;
 
+  @include mobile{
+    height: 955px;
+  }
+
   .contact-bg {
     background-color: $bg-primary;
     width: 100%;
-    height: 810px;
+    height: 100%;
     position: absolute;
     bottom: 0;
     z-index: -1;
+    
   }
   h3{
     @include font($primary, 700, $fontSize-h3);
@@ -228,11 +300,22 @@ ul.aboutBtn {
     position: relative;
     display: inline-block;
     letter-spacing: 12.5px;
+
+    @include mobile{
+      font-size: 20px;
+      padding-top: 60px;
+    }
   }
   p {
     @include font($secondary, 500, 15px);
     letter-spacing: 2px;
     margin-bottom: 40px;
+
+    @include mobile{
+      padding: 0px 50px;
+      line-height: 1.6;
+      font-size: 14px;
+    }
   }
 }
 
@@ -246,11 +329,22 @@ ul.aboutBtn {
   box-shadow: 0 10px 12px #e0decdc0;
   // justify-content: space-around;
 
+  @include mobile{
+    flex-direction: column;
+    width: 300px;
+  }
+
   .swiper {
     width: 465px;
     height: auto;
     cursor: grab;
     border-radius: 8px;
+
+    @include mobile{
+      width: 100%;
+      height: 200px;
+      border-radius: 8px 8px 0px 0px;
+    }
   }
 }
 
@@ -258,8 +352,13 @@ ul.aboutBtn {
   margin: 40px 50px 42px 50px;
   text-align: start;
 
-  .item_block {
-    
+  @include mobile{
+    margin: 40px 10px 40px 20px;
+  }
+
+  form {
+    display: inline-block;
+
     label {
       @include font($primary, 500, 14px);
     }
@@ -309,6 +408,10 @@ ul.aboutBtn {
     cursor: pointer;
     transition: all 0.3s;
 
+    @include mobile{
+      margin-bottom: 0px;
+    }
+
     &:hover {
       opacity: 0.6;
     }
@@ -325,6 +428,10 @@ ul.aboutBtn {
   transition: all 0.3s;
   cursor: pointer;
   // z-index: 1;
+
+  @include mobile{
+    display: none !important;
+  }
 
   &:hover {
     opacity: 0.6;

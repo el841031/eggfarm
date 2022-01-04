@@ -37,3 +37,29 @@
   padding: $p;
   background-color: $bc;
 }
+
+
+// RWD
+@mixin mobile(){ // 手機板
+	@media all and (max-width: 576px){
+		@content;
+	}
+}
+
+@mixin iPad(){ // 平板
+	@media all and (max-width: 768px){
+		@content;
+	}
+}
+
+@mixin laptop(){ // 筆電
+	@media all and (max-width: 992px){
+		@content;
+	}
+}
+
+@mixin desktop(){ // 桌機板
+	@media all and (max-width: 1200px){
+		@content;
+	}
+}

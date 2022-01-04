@@ -7,7 +7,7 @@
   <link rel="shortcut icon" href="./images/logo.ico">
 
   <!-- RWD-viewport設定 -->
-  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes"> -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
   <!-- CSS -->
   <link rel="stylesheet" href="./css/all.css">
@@ -20,6 +20,9 @@
 
   <!-- AOS 套件CDN -->
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <!-- jonsuh套件(漢堡選單) -->
+  <link href="./vendors/jonsuh/hamburgers.css" rel="stylesheet">
 </head>
 <body>
   <!-- header 區域 -->
@@ -31,7 +34,7 @@
     </h1>
 
     <ul class="nav">
-      <li class="nav-item">
+      <li class="nav-item li-one">
         <a href="#" class="nav-item-a">關於橘屋</a>
         <ul class="item-open">
           <li><a href="#">綺麗夢想</a></li>
@@ -43,7 +46,28 @@
       <li class="nav-item"><a href="#" class="nav-item-a">店鋪資訊</a></li>
       <li class="nav-item"><a href="#" class="nav-item-a">常見問題</a></li>
     </ul>
+
+    <!-- 漢堡選單 -->
+    <button class="hamburger hamburger--squeeze" type="button">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
   </header>
+
+  <ul class="ham-nav">
+    <li class="nav-item">
+      <a href="#" class="nav-item-a ham-a">關於橘屋</a>
+      <ul class="item-open">
+        <li><a href="#">綺麗夢想</a></li>
+        <li><a href="#">企業理念</a></li>
+      </ul>
+    </li>
+    <li class="nav-item"><a href="#">客戶之聲</a></li>
+    <li class="nav-item"><a href="#">雞蛋商店</a></li>
+    <li class="nav-item"><a href="#">店鋪資訊</a></li>
+    <li class="nav-item"><a href="#">常見問題</a></li>
+  </ul>
 
   <!-- 輪播圖區域 -->
   <section class="banner swiper" id="swiper1">
@@ -54,8 +78,8 @@
 
       <div class="swiper-slide" style="background-image: url(./images/banner2.jpg); background-position: center; background-size: cover;">
       </div>
-
-      <div class="swiper-slide" style="background-image: url(./images/banner3.jpg); background-position: center; background-size: cover;">
+      
+      <div class="swiper-slide three" style="background-image: url(./images/banner3.jpg); background-position: center; background-size: cover;">
       </div>
     </div>
     
@@ -87,7 +111,7 @@
           </div>
         </li>
 
-        <li class="egg-items2" data-aos="fade-down" data-aos-delay="150">
+        <li class="egg-items2 li-one" data-aos="fade-down" data-aos-delay="150">
           <a class="egg-img" href="./images/egg2-b.jpg" data-lightbox="egg-lightbox">
             <img src="./images/egg2.jpg" alt="橘屋的雞蛋">
           </a>

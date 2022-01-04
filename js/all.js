@@ -1,7 +1,7 @@
 $(document).ready(function () {
 
   // 下拉式選單
-  $('.nav-item:first-child').hover(function () {
+  $('.li-one').hover(function () {
     $('.item-open').fadeToggle(200);
     }
   );
@@ -13,7 +13,14 @@ $(document).ready(function () {
     $(this).parent().siblings().find('.nav-item-a').removeClass('active');
   });
   
-  
+
+  // 漢堡選單
+  $('.hamburger').click(function (e) {
+    $(this).toggleClass("is-active");
+    $('.ham-nav').toggleClass("open");
+  }); 
+
+
   // top按鈕
   $(window).scroll(function(e) {
     if ( $(this).scrollTop() > 400 ){
