@@ -58,7 +58,7 @@ $(document).ready(function () {
     loop: true,
     speed: 2500, 
     autoplay: { 
-      delay: 4000,
+      delay: 5000,
       disableOnInteraction: false,
     },
   
