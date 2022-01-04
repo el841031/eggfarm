@@ -74,6 +74,8 @@ $(document).ready(function () {
   lightbox.option({
 		'resizeDuration': 600, // 放大的速度
     'wrapAround': true,
+    'disableScrolling': true,
+    // 'alwaysShowNavOnTouchDevices': true,
   })
 
 

@@ -257,7 +257,7 @@ button.hamburger {
   height: 0.5px;
   background-color: rgba(255, 255, 255, 0.4);
   position: absolute;
-  left: 11px;
+  left: 31px;
   bottom: 0px;
 }
 
@@ -540,6 +540,8 @@ button.hamburger {
 
 .egg-shop ul.egg-list li a img {
   border-radius: 100%;
+  width: 250px;
+  height: 250px;
 }
 
 .egg-shop ul.egg-list li.egg-items2 {
@@ -563,7 +565,7 @@ button.hamburger {
 }
 
 .egg-shop ul.egg-list li.egg-items3 .price > .price-text {
-  margin-right: 115px;
+  margin-right: 71px;
 }
 
 .price {
@@ -578,9 +580,15 @@ button.hamburger {
   left: 15px;
 }
 
+@media all and (max-width: 576px) {
+  .price {
+    bottom: -48px;
+  }
+}
+
 .price .price-text {
   text-align: start;
-  margin-right: 116px;
+  margin-right: 71px;
 }
 
 @media all and (max-width: 576px) {
@@ -611,6 +619,16 @@ button.hamburger {
   letter-spacing: 2.0px;
   margin-top: 5px;
   padding-left: 8px;
+}
+
+.egg-items3 > .price {
+  bottom: -54px;
+}
+
+@media all and (max-width: 576px) {
+  .egg-items3 > .price {
+    bottom: -48px;
+  }
 }
 
 .about {
@@ -968,5 +986,11 @@ ul.aboutBtn li a::before {
 
 .top:hover {
   opacity: 0.6;
+}
+
+@media all and (max-width: 576px) {
+  .lb-data .lb-close {
+    right: 8px !important;
+  }
 }
 /*# sourceMappingURL=all.css.map */

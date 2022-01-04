@@ -174,28 +174,17 @@ button.hamburger {
       height: 0.5px;
       background-color: rgba(256, 256, 256, 0.4);
       position: absolute;
-      left: 11px;
+      left: 31px;
       bottom: 0px;
     }
 
     .nav-item-a {
       position: relative;
-
-      // &::after {
-      //   content: "\002B";
-      //   color: white;
-      //   font-size: 35px;
-      //   position: absolute;
-      //   right: 0px;
-      //   bottom: 12px;
-      //   font-weight: 300;
-      // }
     }
 
     a {
       @include font($tertiary, 400, 17px);
       color: white;
-      // padding: 20px 219px 20px 0px;
       padding: 21px 109px;
     }
 
