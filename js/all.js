@@ -15,14 +15,14 @@ $(document).ready(function () {
   
 
   // 漢堡選單
-  $('.hamburger').click(function (e) {
+  $('.hamburger').click(function () {
     $(this).toggleClass("is-active");
     $('.ham-nav').toggleClass("open");
   }); 
 
 
   // top按鈕
-  $(window).scroll(function(e) {
+  $(window).scroll(function() {
     if ( $(this).scrollTop() > 400 ){
       $('.top').fadeIn(200);
     } else {
@@ -30,7 +30,7 @@ $(document).ready(function () {
     }
   });
 
-  $('.top').click(function (e) { 
+  $('.top').click(function () { 
     $('html, body').animate({scrollTop: 0}, 600); 
   });
 
@@ -38,7 +38,7 @@ $(document).ready(function () {
 
   // (Swiper 套件)
   // banner-01
-  const swiper1 = new Swiper('#swiper1', {
+  new Swiper('#swiper1', {
     loop: true,
     speed: 2500, 
     autoplay: { 
@@ -54,7 +54,7 @@ $(document).ready(function () {
   });
 
   // banner-02
-  const swiper2 = new Swiper('#swiper2', {
+  new Swiper('#swiper2', {
     loop: true,
     speed: 2500, 
     autoplay: { 
@@ -76,6 +76,7 @@ $(document).ready(function () {
     'wrapAround': true,
     'disableScrolling': true,
     'alwaysShowNavOnTouchDevices': true,
+    // 'positionFromTop': 250,
   })
 
 

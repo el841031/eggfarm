@@ -9,9 +9,6 @@
   <!-- RWD-viewport設定 -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="./css/all.css">
-
   <!-- Swiper(輪播效果)套件CDN -->
   <!-- <link href="https://unpkg.com/swiper@7/swiper-bundle.min.css" rel="stylesheet" /> -->
   <link href="./vendors/Swiper/swiper-bundle.min.css" rel="stylesheet" />
@@ -26,6 +23,9 @@
 
   <!-- jonsuh套件(漢堡選單) -->
   <link href="./vendors/jonsuh/hamburgers.css" rel="stylesheet">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./css/all.css">
 </head>
 <body>
   <!-- header 區域 -->
@@ -102,7 +102,7 @@
     <div class="egg-shop">
       <h3>雞蛋商店總覽</h3>
       <ul class="egg-list">
-        <li class="egg-items2" data-aos="fade-down">
+        <li class="egg-items" data-aos="fade-down">
           <a class="egg-img" href="./images/egg1-b.jpg" data-lightbox="egg-lightbox">
             <img src="./images/egg1.jpg" alt="雲上的雞蛋">
           </a>
@@ -118,7 +118,7 @@
           </div>
         </li>
 
-        <li class="egg-items2 li-one" data-aos="fade-down" data-aos-delay="150">
+        <li class="egg-items li-one" data-aos="fade-down" data-aos-delay="150">
           <a class="egg-img" href="./images/egg2-b.jpg" data-lightbox="egg-lightbox">
             <img src="./images/egg2.jpg" alt="橘屋的雞蛋">
           </a>
@@ -134,7 +134,7 @@
           </div>
         </li>
 
-        <li class="egg-items3" data-aos="fade-down" data-aos-delay="300">
+        <li class="egg-items" data-aos="fade-down" data-aos-delay="300">
           <a class="egg-img" href="./images/egg3-b.jpg" data-lightbox="egg-lightbox">
             <img src="./images/egg3.jpg" alt="香茅的雞蛋">
           </a>
@@ -150,7 +150,7 @@
           </div>
         </li>
 
-        <li class="egg-items3" data-aos="fade-down" data-aos-delay="450">
+        <li class="egg-items" data-aos="fade-down" data-aos-delay="450">
           <a class="egg-img" href="./images/egg4-b.jpg" data-lightbox="egg-lightbox">
             <img src="./images/egg4.jpg" alt="滿月郎雞蛋">
           </a>
@@ -166,7 +166,7 @@
           </div>
         </li>
 
-        <li class="egg-items3" data-aos="fade-down" data-aos-delay="600">
+        <li class="egg-items" data-aos="fade-down" data-aos-delay="600">
           <a class="egg-img" href="./images/egg5-b.jpg" data-lightbox="egg-lightbox">
             <img src="./images/egg5.jpg" alt="金盞花雞蛋">
           </a>
@@ -188,7 +188,6 @@
 
   <!-- 簡介區域 -->
   <section class="about">
-    <div class="aboutBg"></div>
     <h2>位於花蓮壽豐鄉的半山腰</h2>
     <p class="about-text1">
       自成立以來，在自然豐富的環境中<br>我們堅持一直使用最天然的玉米飼料餵養蛋雞<br>定期追蹤雞的身體素質及狀況<br>農場飼養主人已有超過60年的餵養經驗<br>濃厚的當地養殖蛋雞的技術，代代相傳<br>
@@ -206,7 +205,6 @@
 
   <!-- 聯絡我們 -->
   <section class="contact">
-    <div class="contact-bg"></div>
     <h3>聯絡我們</h3>
     <p>有任何問題都歡迎聯繫橘屋x養雞場，我們很樂意為您服務!</p>
 
@@ -232,17 +230,14 @@
         <form action="#" method="get">
           <div class="item_block">
             <label for="name">姓名:</label>
-            <br>
             <input type="text" id="name" placeholder="請輸入姓名" required>            
           </div>
           <div class="item_block">
             <label for="email">信箱:</label>
-            <br>
             <input type="email" id="email" placeholder="請輸入信箱" required>
           </div>
           <div class="item_block">
             <label for="content">問題描述:</label>
-            <br>
             <textarea name="" id="content" cols="30" rows="8" placeholder="請描述您遇到的問題&#13;&#10;(至少輸入十個字元以上)" minlength="10" required></textarea>
           </div>
           <input class="submit-btn" type="submit" value="發送訊息">

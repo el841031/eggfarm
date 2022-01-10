@@ -77,6 +77,10 @@
       &.active {
         color: $primary;
       }
+
+      @include iPad{
+        padding: 10px 22px;
+      }
     }
   }
 }
