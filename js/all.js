@@ -79,6 +79,24 @@ $(document).ready(function () {
     // 'positionFromTop': 250,
   })
 
+  let scrollWidth = document.documentElement.scrollWidth;
+  if(scrollWidth <= 576){
+    lightbox.option({
+      'positionFromTop': 250,
+    })
+  }else if(scrollWidth > 576 && scrollWidth <= 992){
+    lightbox.option({
+      'positionFromTop': 150,
+    })
+  }else if(scrollWidth > 992 && scrollWidth <= 1200){
+    lightbox.option({
+      'positionFromTop': 100,
+    })
+  }else{
+    lightbox.option({
+      'positionFromTop': 50,
+    })
+  }
 
 
   // (AOS套件)
